@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración inicial de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reseñas de la comunidad de GameVault sobre videojuegos.">
+  <title>Reseñas | GameVault</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="encabezado">
+    <!-- Logo y nombre de la página -->
+    <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36">GameVault</a>
+
+    <!-- Menú hamburguesa -->
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+    <!-- Menú de navegación entre las páginas -->
+    <nav aria-label="Navegación principal">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html" aria-current="page">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" class="entrar">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Encabezado de la página -->
+    <section aria-labelledby="t-res">
+      <h1 id="t-res">Reseñas de la comunidad</h1>
+      <p>Opiniones de jugadores sobre los juegos del catálogo. Cualquiera puede leerlas.</p>
+      <p class="aviso">Las reseñas de abajo son ejemplos ficticios para el diseño del sitio.</p>
+
+      <!-- Reseñas disponibles en la página -->
+      <section class="rejilla tres" id="lista-resenas" aria-label="Lista de reseñas">
+        <p id="resenas-vacia" hidden>Aún no hay reseñas. ¡Sé la primer persona en publicar una!</p>
+      </section>
+    </section>
+
+    <!-- Sección para publicar una reseña -->
+    <section aria-labelledby="t-pub">
+      <h2 id="t-pub">Publicar una reseña</h2>
+      <!-- Aviso de inicio de sesión para publicar reseñas -->
+      <aside class="aviso-acceso" aria-label="Requisito de acceso">
+        <strong>Solo para usuarios con cuenta.</strong> Los invitados pueden leer, pero para publicar necesitas <a
+          href="login.html">iniciar sesión o crear una cuenta</a>.
+      </aside>
+
+      <!-- Formulario para publicar tu reseña -->
+      <form class="formulario" id="form-resena" action="#" method="post" data-requiere="usuario" novalidate>
+        <label for="res-juego">Juego</label>
+        <select id="res-juego" name="juego" required>
+          <option value="">Selecciona un juego</option>
+          <option value="The Witcher 3: Wild Hunt">The Witcher 3: Wild Hunt</option>
+          <option value="Celeste">Celeste</option>
+          <option value="Portal 2">Portal 2</option>
+          <option value="Disco Elysium">Disco Elysium</option>
+          <option value="Terraria">Terraria</option>
+          <option value="Red Dead Redemption 2">Red Dead Redemption 2</option>
+          <option value="Elden Ring">Elden Ring</option>
+          <option value="Baldur’s Gate 3">Baldur’s Gate 3</option>
+          <option value="Hades">Hades</option>
+          <option value="Hollow Knight">Hollow Knight</option>
+          <option value="Stardew Valley">Stardew Valley</option>
+          <option value="Cyberpunk 2077">Cyberpunk 2077</option>
+        </select>
+        <label for="res-nota">Nota (del 1 al 10)</label>
+        <input type="number" id="res-nota" name="nota" min="1" max="10" step="1" required>
+        <label for="res-titulo">Título de tu reseña</label>
+        <input type="text" id="res-titulo" name="titulo" required minlength="5" maxlength="80">
+        <label for="res-texto">Tu opinión</label>
+        <textarea id="res-texto" name="texto" rows="6" required minlength="30" maxlength="1000"
+          placeholder="Cuéntanos qué te gustó y qué no"></textarea>
+        <button class="boton" type="submit">Publicar reseña</button>
+      </form>
+    </section>
+  </main>
+  <footer class="pie">
+    <!-- Derechos de autor -->
+    <p>© 2026 GameVault. José Israel García Pacheco y Gerardo Rebollar Mondragón.</p>
+    <!-- Enlaces a las otras páginas -->
+    <nav aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="admin.html">Administración</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

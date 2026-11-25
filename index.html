@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración inicial de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Comunidad de noticias y reseñas de videojuegos con biblioteca personal y enlaces a tiendas oficiales.">
+  <title>Inicio | GameVault</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="encabezado">
+    <!-- Logo y nombre de la página -->
+    <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36">GameVault</a>
+
+    <!-- Menú hamburguesa -->
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+    <!-- Menú de navegación entre las páginas -->
+    <nav aria-label="Navegación principal">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" class="entrar">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Pantalla inicial -->
+    <section class="hero" aria-labelledby="t-hero">
+      <h1 id="t-hero">Tu comunidad de videojuegos, en un solo lugar</h1>
+      <p>Noticias, reseñas de la comunidad y enlaces a tiendas oficiales. Encuentra tu próximo juego según lo que de
+        verdad te gusta.</p>
+      <a class="boton" href="productos.html">Explorar el catálogo</a>
+      <a class="boton boton-sec" href="contacto.html">Escríbenos</a>
+    </section>
+
+    <!-- Recomendaciones de que hacer en la página -->
+    <section aria-labelledby="t-noticias">
+      <h2 id="t-noticias">Lo último en GameVault</h2>
+      <p><a href="noticias.html">Ver todas las noticias →</a></p>
+      <div class="rejilla tres" id="noticias-recientes">
+        <article class="tarjeta">
+          <time datetime="2026-11-18">18 de noviembre de 2026</time>
+          <h3>Cómo elegir tu próximo juego según tu género</h3>
+          <p>Una guía rápida para filtrar por género y plataforma sin perderte entre cientos de títulos.</p>
+        </article>
+        <article class="tarjeta">
+          <time datetime="2026-11-15">15 de noviembre de 2026</time>
+          <h3>Biblioteca personal: organiza tu pendiente</h3>
+          <p>Guarda los juegos que quieres jugar y sigue tu progreso desde tu perfil (próximamente).</p>
+        </article>
+        <article class="tarjeta">
+          <time datetime="2026-11-10">10 de noviembre de 2026</time>
+          <h3>Reseñas de la comunidad: cómo escribir una útil</h3>
+          <p>Consejos para compartir opiniones honestas que ayuden a otros jugadores a decidir.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ¿Por qué usar GameVault?-->
+    <section aria-labelledby="t-comunidad">
+      <h2 id="t-comunidad">¿Por qué GameVault?</h2>
+      <div class="rejilla tres">
+        <article class="tarjeta">
+          <h3>Todo centralizado</h3>
+          <p>Noticias y reseñas en un mismo sitio, sin buscar en mil páginas.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Opiniones de miembros</h3>
+          <p>Reseñas escritas por jugadores reales de la comunidad.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Tiendas oficiales</h3>
+          <p>Enlaces directos a tiendas legítimas para comprar con confianza.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <!-- Derechos de autor -->
+    <p>© 2026 GameVault. José Israel García Pacheco y Gerardo Rebollar Mondragón.</p>
+    <!-- Enlaces a las otras páginas -->
+    <nav aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="admin.html">Administración</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

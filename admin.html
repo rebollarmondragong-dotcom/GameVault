@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuracion inicial de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Panel de administración: moderación de reseñas y publicación de noticias.">
+  <title>Administración | GameVault</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="encabezado">
+    <!-- Logo y nombre de la página -->
+    <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36">GameVault</a>
+    <!-- Menú hamburguesa -->
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+    <!-- Menú de navegación entre las páginas -->
+    <nav aria-label="Navegación principal">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html" class="entrar">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main data-requiere="admin">
+    <!-- Encabezado de la página -->
+    <section aria-labelledby="t-adm">
+      <h1 id="t-adm">Panel de administración</h1>
+      <aside class="aviso-acceso" aria-label="Requisito de acceso">
+        <strong>Solo para administradores.</strong> Desde aquí se revisan las reseñas y se publican noticias.
+      </aside>
+    </section>
+
+    <!-- Sección para moderación de reseñas -->
+    <section aria-labelledby="t-mod">
+      <h2 id="t-mod">Moderar reseñas</h2>
+      <p>Revisa las reseñas publicadas y elimina las que tengan contenido inapropiado.</p>
+      <ul class="catalogo lista-admin" id="lista-admin-resenas"></ul>
+      <p id="admin-vacio" hidden>No hay reseñas para moderar.</p>
+    </section>
+
+    <!-- Sección para publicación de noticias -->
+    <section aria-labelledby="t-pubnot">
+      <h2 id="t-pubnot">Publicar una noticia</h2>
+      <form class="formulario" id="form-noticia" action="#" method="post" novalidate>
+        <label for="not-titulo">Título</label>
+        <input type="text" id="not-titulo" name="titulo" required minlength="5" maxlength="100">
+        <label for="not-cat">Categoría</label>
+        <select id="not-cat" name="categoria" required>
+          <option value="">Selecciona una categoría</option>
+          <option value="industria">Industria</option>
+          <option value="guias">Guías</option>
+          <option value="comunidad">Comunidad</option>
+          <option value="resenas">Reseñas</option>
+        </select>
+        <label for="not-texto">Contenido</label>
+        <textarea id="not-texto" name="contenido" rows="7" required minlength="30" maxlength="2000"></textarea>
+        <button class="boton" type="submit">Publicar noticia</button>
+      </form>
+    </section>
+  </main>
+  <footer class="pie">
+    <!-- Derechos de autor -->
+    <p>© 2026 GameVault. José Israel García Pacheco y Gerardo Rebollar Mondragón.</p>
+    <!-- Enlaces a las otras páginas -->
+    <nav aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="admin.html">Administración</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>

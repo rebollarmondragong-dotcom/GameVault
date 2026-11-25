@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración inicial de la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Formulario de contacto de GameVault (solo usuarios con cuenta).">
+  <title>Contacto | GameVault</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Barra superior -->
+  <header class="encabezado">
+    <!-- Logo y nombre de la página -->
+    <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36">GameVault</a>
+
+    <!-- Menú hamburguesa -->
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">☰ Menú</button>
+
+    <!-- Menú de navegación entre las páginas-->
+    <nav aria-label="Navegación principal">
+      <ul class="menu" id="menu-principal">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        <li><a href="login.html" class="entrar">Iniciar sesión</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Encabezado de la página -->
+    <section aria-labelledby="t-contacto">
+      <h1 id="t-contacto">Contacto</h1>
+      <p>¿Tienes una duda, una sugerencia o quieres proponer un juego? Escríbenos.</p>
+      <aside class="aviso-acceso" aria-label="Requisito de acceso">
+        <!-- Aviso de inicio de sesión para usar el formulario de contacto -->
+        <strong>Solo para usuarios con cuenta.</strong> Si entraste como invitado, <a href="login.html">inicia sesión o
+          crea una cuenta</a> para escribirnos.
+      </aside>
+
+      <!-- Formulario de contacto -->
+      <form class="formulario" id="form-contacto" action="#" method="post" novalidate data-requiere="usuario">
+        <fieldset>
+          <legend>Tus datos</legend>
+          <div class="doble">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" autocomplete="name"
+                placeholder="Ej. Ana López">
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" required autocomplete="email"
+                placeholder="nombre@correo.com">
+            </div>
+          </div>
+          <div class="doble">
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" inputmode="numeric"
+                autocomplete="tel" placeholder="10 dígitos" aria-describedby="ayuda-tel">
+              <small class="ayuda" id="ayuda-tel">Solo números, sin espacios ni guiones.</small>
+            </div>
+            <div class="campo">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto" required>
+                <option value="">Selecciona una opción</option>
+                <option value="duda">Duda general</option>
+                <option value="sugerencia">Sugerencia de juego</option>
+                <option value="resena">Problema con una reseña</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Tu mensaje</legend>
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" required minlength="10" maxlength="500"
+              placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+          </div>
+          <div class="campo casilla">
+            <input type="checkbox" id="acepto" name="acepto" required>
+            <label for="acepto">Acepto que GameVault use mis datos para responderme.</label>
+          </div>
+        </fieldset>
+        <button class="boton" type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+  <footer class="pie">
+    <!-- Derechos de autor -->
+    <p>© 2026 GameVault. José Israel García Pacheco y Gerardo Rebollar Mondragón.</p>
+    <!-- Enlaces a las otras páginas -->
+    <nav aria-label="Enlaces del pie de página">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Catálogo</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="resenas.html">Reseñas</a></li>
+        <li><a href="biblioteca.html">Biblioteca</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="login.html">Iniciar sesión</a></li>
+        <li><a href="admin.html">Administración</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
